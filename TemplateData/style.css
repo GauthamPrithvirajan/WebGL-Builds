@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "EurostileCondensedRegular";
+  src: url('Eurostile Condensed Regular.otf');
+}
+
+body { padding: 0; margin: 0; font-family:"EurostileCondensedRegular", arial; }
+#unity-container { width:100%; height:100vh; display:flex; flex-flow: row wrap; justify-content: space-evenly; gap:0px;}
+
+#navbar{width:100%; height:60px; background:#002A4D;}
+
+#sidePanel{box-sizing:border-box; height:calc(100% - 60px); width: 30%; background:#ffffff; padding:36px; display:flex; flex-flow: row wrap; justify-content:space-around; gap:16px; overflow-y:scroll;}
+
+#unity-container.unity-desktop {}
+#unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
+
+#unity-canvas {background: #002A4D }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+
+.swatch{box-sizing:border-box; cursor:pointer; width:40px; height:40px; border-radius:4px 4px 18px 4px; border:1px solid #aaa; transition: transform 0.3s ease-in-out 0s;}
+
+.swatch:hover{transform:scale(1.2);}
+
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#unity-logo { width: 154px; height: 130px; background: url('Axo.svg') no-repeat center }
+#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
+#unity-footer { position: relative; display:none; }
+.unity-mobile #unity-footer { display: none }
+#unity-logo-title-footer { float:left; width: 102px; height: 38px; background: url('unity-logo-title-footer.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+
+/* Tooltip text */
+.tooltipText {
+	display:none;
+  width: auto;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+  text-align: center;
+  padding: 4px;
+  border-radius: 6px;
+  font-family:arial;
+  font-size:12px;
+  position: absolute;
+  z-index: -10;
+}
